@@ -1,0 +1,191 @@
+\usepackage{etex}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,enumerate,fullpage,float}
+
+%\usepackage[usenames,dvipsnames,pdf]{pstricks}
+\usepackage{epsfig,microtype}
+\usepackage{hyperref,titling}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,shapes}
+
+% \usepackage[ngerman]{babel}
+%\usepackage[T1]{fontenc} % Trennung bei Woertern mit Umlauten
+\usepackage{amsthm,mathabx,cite}
+\usepackage{url,booktabs}
+\usepackage{graphicx}
+\usepackage{comment,microtype}
+\usepackage{stmaryrd,relsize}
+
+%\usepackage{pst-all}
+\usepackage{faktor}
+
+%\usepackage{tikz-cd} % for commutative diagrams, but didn't work here
+\usepackage{amscd} % for (very simple) commutative diagrams
+\usepackage[all]{xy}
+
+%\hyphenation{mani-fold}
+%\hyphenation{sub-mani-fold}
+
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\KK}{\mathbb{K}}
+\newcommand{\PP}{\mathbb{P}}
+%\newcommand{\CP}{\mathbb{CP}}
+%\newcommand{\RP}{\mathbb{RP}}
+\newcommand {\kk} {\Bbbk}
+\newcommand{\VV}{\mathbb{V}}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\DD}{\mathbb{D}}
+
+
+\newcommand{\mfd}{\mathfrak d}
+\newcommand{\mfD}{\mathfrak D}
+\newcommand{\mfc}{\mathfrak c}
+\newcommand{\mfU}{\mathfrak U}
+\newcommand{\mfu}{\mathfrak u}
+\newcommand{\mfB}{\mathfrak B}
+\newcommand{\mft}{\mathfrak t}
+\newcommand{\mfm}{\mathfrak m}
+\newcommand{\mfb}{\mathfrak b}
+\newcommand{\mfj}{\mathfrak j}
+\newcommand{\mfv}{\mathfrak v}
+\newcommand{\mfM}{\mathfrak M}
+\newcommand{\mfN}{\mathfrak N}
+\newcommand{\mfX}{\mathfrak X}
+\newcommand{\mfR}{\mathfrak R}
+\newcommand{\mfT}{\mathfrak T}
+\newcommand{\mfL}{\mathfrak L}
+
+\newcommand{\mcM}{\mathcal M}
+\newcommand{\mcP}{\mathcal P}
+\newcommand{\mcC}{\mathcal C}
+\newcommand{\mcN}{\mathcal N}
+\newcommand{\mcX}{\mathcal X}
+\newcommand{\mcR}{\mathcal R}
+\newcommand{\mcO}{\mathcal O}
+\newcommand{\mcA}{\mathcal A}
+\newcommand{\mcF}{\mathcal F}
+\newcommand{\mcE}{\mathcal E}
+\newcommand{\mcU}{\mathcal U}
+\newcommand{\mcJ}{\mathcal J}
+\newcommand{\mcT}{\mathcal T}
+\newcommand{\mcD}{\mathcal D}
+\newcommand{\mcB}{\mathcal B}
+\newcommand{\mcL}{\mathcal L}
+\newcommand{\mcG}{\mathcal G}
+\newcommand{\mcS}{\mathcal S}
+
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\dvol}{\mathrm{vol}_{\Sigma}}
+\newcommand{\ddd}{{(d,d')}}
+\newcommand{\ddv}{{2d+2d'-\nu}}
+\newcommand{\ddvm}{{-2d-2d'-\nu}}
+\newcommand{\PtP}{{\PP^1 \times \PP^1}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\si}{\Sigma}
+\newcommand{\del}{\partial}
+\newcommand{\db}{\overline{\partial}}
+\newcommand{\cin}{C^{\infty}}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\wt}[1]{\widetilde{#1}}
+\newcommand{\ddt}{\frac{\dd}{\dd t}_{|_{t=0}}}
+\newcommand{\glue}{\operatorname{glue}}
+
+\newcommand{\bq}{\textbf{q}}
+\newcommand{\bp}{\textbf{p}}
+\newcommand{\bz}{\textbf{z}}
+\newcommand{\wh}[1]{\widehat{#1}}
+\newcommand{\wwp}{\omega_{\text{WP}}}
+\newcommand{\hfM}{\wh{\mfM}_{g,k}}
+\newcommand{\cMT}{\mcM_{g,k,h,n}(T)}
+\newcommand{\fgt}{\operatorname{fgt}}
+\newcommand{\fMT}{\mfM_{g,k,h,n}(T)}
+\newcommand{\transport}{\operatorname{tran}}
+\newcommand{\pf}{\operatorname{pf}}
+
+
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Mult}{\operatorname{Mult}}
+\newcommand{\Mono}{\operatorname{Mono}}
+\newcommand{\Pic}{\operatorname{Pic}}
+\newcommand{\Init}{\operatorname{Init}}
+\newcommand{\Supp}{\operatorname{Supp}}
+\newcommand{\Sing}{\operatorname{Sing}}
+\newcommand{\Trees}{\operatorname{Trees}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\Spf}{\operatorname{Spf}}
+\newcommand{\Val}{\operatorname{Val}}
+\newcommand{\Int}{\operatorname{Int}}
+\newcommand{\Asym}{\operatorname{Asym}}
+\newcommand{\Interstices}{\operatorname{Interstices}}
+\newcommand{\Joints}{\operatorname{Joints}}
+\newcommand{\Opp}{\operatorname{Opp}}
+\newcommand{\dlog}{\operatorname{dlog}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Log}{\operatorname{Log}}
+\newcommand{\ts}{\mathrm{T}}
+\newcommand{\rank}{\operatorname{rk}}
+\newcommand{\ind}{\operatorname{index}}
+%\newcommand{\dim}{\operatorname{dim}}
+%\newcommand{\ker}{\operatorname{ker}}
+\newcommand{\coker}{\operatorname{coker}}
+\newcommand{\End}{\operatorname{End}}
+%\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\image}{\operatorname{Im}}
+\newcommand{\grapho}{\operatorname{graph}}
+\newcommand{\Trace}{\operatorname{Tr}}
+\newcommand{\ver}{\operatorname{ver}}
+\newcommand{\area}{\operatorname{area}}
+\newcommand{\diff}{\operatorname{Diff}}
+\newcommand{\diffp}{\operatorname{Diff}^+(\si)}
+\newcommand{\arc}{\operatorname{arc}}
+\newcommand{\rot}{\operatorname{rot}}
+\newcommand{\PicG}{\operatorname{Pic}}
+\newcommand{\Div}{\operatorname{Div}}
+\newcommand{\Ham}{\operatorname{Ham}}
+\newcommand{\obj}{\operatorname{Obj}}
+\newcommand{\lcm}{\operatorname{lcm}}
+
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+
+\newcommand{\out}{\mathrm{out}}
+\newcommand{\disk}{\mathrm{disk}}
+\newcommand{\pt}{\mathrm{pt}}
+\newcommand{\trop}{\mathrm{trop}}
+\newcommand{\prim}{\mathrm{prim}}
+\newcommand{\ev}{\mathrm{ev}}
+\newcommand{\GL}{\mathrm{GL}}
+\newcommand{\acs}{\mathrm{a.c.str.}}
+
+\newcommand*{\longhookrightarrow}{\ensuremath{\lhook\joinrel\relbar\joinrel\rightarrow}}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{prop}{Proposition}
+\newtheorem{lem}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\pagestyle{plain}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{\medskipamount}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\theoremstyle{remark}
+\newtheorem{rmk}{Remark}
+
+\theoremstyle{remark}
+\newtheorem{choice}{Choice}
+
+\everymath{\displaystyle}
